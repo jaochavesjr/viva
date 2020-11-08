@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: password
+
+development:
+  <<: *default
+  database: viva_vaquejada_development
+
+test:
+  <<: *default
+  database: viva_vaquejada_test
+
+production:
+  <<: *default
+  database: viva_vaquejada_production
+  username: viva_vaquejada
+  password: <%= ENV['VIVA_VAQUEJADA_DATABASE_PASSWORD'] %>

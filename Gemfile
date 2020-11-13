@@ -17,6 +17,7 @@ gem 'devise'
 gem 'cancancan'
 gem 'draper'
 gem 'pundit'
+gem 'activeadmin_quill_editor'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
